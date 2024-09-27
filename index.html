@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js"> -->
+    <title>Mambo Drinks</title>
+</head>
+<body>
+    <header id="home">
+        <nav class="navbar">
+            <img class="logo_main" src="./public/logo-main.png" alt="logo Mambo">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="menu-icon"></i></span>
+            </button>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+    </section>
+
+    <section id="features" class="features">
+        <div class="features_hoja_izquierda">
+            <img src="./public/hojas_izq-arriba.png" alt="hojas">
+        </div>
+        <div class="features_content">
+            <img class="from_chile" src="./public/frase.png" alt="From chile to your hand">
+            <p>Descubre la esencia de los viñedos chilenos en cada lata de nuestros vinos cocktails. Combinando tradición, innovación y la calidad de nuestras uvas, cada sorbo te invita a un viaje sensorial desde los campos de Chile hasta tu copa, celebrando la pasión y dedicación en cada detalle.</p>
+        </div>
+        <div class="features_hoja_derecha">
+            <img src="./public/hojas_der-arriba.png" alt="hojas">
+        </div>
+    </section>
+    <div class="hr-container">
+        <hr>
+    </div>
+    <section id="drinks" class="drinks">
+        <h2>Drinks</h2>
+        <div class="drink_content">
+            <div class="drinks_hoja_izquierda">
+                <img src="./public/hojas_izq-medio.png" alt="hojas">
+            </div>
+
+            <div class="drink_card">
+                <img class="lata" src="./public/lata_naranja.png" alt="lata naranja">
+                <p>Sweet Light Sparkling en base a Sauvingon Blanc del valle central de Chile.</p>
+                <a href="#learn-more" class="cta-button">MORE</a>
+            </div>
+            <div class="separador">
+                <img src="./public/separador.png" alt="burbujas">
+            </div>
+
+            <div class="drink_card">
+                <img class="lata" src="./public/lata_amarilla.png" alt="lata amarilla">
+                <p>Sweet Drink cocktail en base a sobres de Maracuyá y mango.</p>
+                <a href="#learn-more" class="cta-button">MORE</a>
+            </div>
+
+            <div class="drinks_hoja_derecha">
+                <img src="./public/hojas_der-medio.png" alt="hojas">
+            </div>
+        </div>
+    </section>
+    <div class="hr-container">
+        <hr>
+    </div>
+    <section class="about" id="about">
+        <div class="about_hoja_izquierda">
+            <img src="./public/hojas_izq-abajo.png" alt="hojas">
+        </div>
+        <div class="about_content">
+            <h2>About</h2>
+            <p>Mambo Drinks ofrece vinos cocktails en lata de 250 cc, creados con insumos de alta calidad, que combinan tradición e innovación para brindar una experiencia sensorial única, perfecta para celebrar en playas y fiestas, con sabores frescos como maracuyá y mango, y nuevas líneas en desarrollo con berries y hierbas en tendencia.</p>
+        </div>
+        <div class="about_hoja_derecha">
+            <img src="./public/hojas_der-abajo.png" alt="hojas">
+        </div>
+    </section>
+    <div class="hr-container">
+        <hr>
+    </div>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form id="contact-form" class="form-container">
+            <div class="label_container">
+                <label for="first-name">NAME:</label>
+                <input type="text" id="first-name" required>
+                <span class="error" id="error-first-name"></span>
+            </div>
+            
+            <div class="label_container">
+                <label for="email">E-MAIL:</label>
+                <input type="email" id="email" required placeholder="Example: adress@mail.com">
+                <span class="error" id="error-email"></span>
+            </div>
+            
+            <div class="label_container">
+                <label for="phone">PHONE:</label>
+                <input type="text" id="phone" required placeholder="Example: +56976840114">
+                <span class="error" id="error-phone"></span>
+            </div>
+
+            <div class="submit_container">
+                <button class="cta-button" type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="relleno"></div>
+        <div class="content_footer">
+            <img src="./public/logo_footer.png" alt="">
+            <ul>
+                <li>ADRESS:</li>
+                <li>Av. Providencia 1208, Providencia, Santiago Chile</li>
+                <li>PHONE:</li>
+                <li>+569 7684 0114</li>
+                <li>SOCIAL NET</li>
+                <li>Instagram @mambo_drinks</li>
+                <li>E-MAIL</li>
+                <li>ventas@gaw.cl</li>
+            </ul>
+        </div>
+        <div class="footer_hoja_derecha">
+            <img src="./public/hojas_der-footer.png" alt="hoja">
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

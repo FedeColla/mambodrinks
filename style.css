@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'didot';
+    src: url(./fonts/Didot\ Regular.ttf) 
+        url(./fonts/Didot\ LT\ Std\ Bold.otf),
+        /* url(./fonts/Didot\ LT\ Std\ Italic.otf), */
+        url(./fonts/Didot\ Medium.ttf),
+        url(./fonts/Didot\ Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'myriadPro';
+    src: url(./fonts/MyriadPro-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Montserrat para botones y labels / didot para los heading / myriadPro para el body y navbar*/
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.no-scroll {
+    overflow: hidden; /* Evita el scroll */
+}
+
+body {
+    font-family: 'myriadPro', sans-serif;
+    line-height: 1.6;
+}
+
+p{
+    font-family: 'myriadPro', sans-serif;
+    font-size: 24px;
+}
+
+h2 {
+    font-family: 'didot', sans-serif;
+    font-weight: 500;
+    font-size: 56px;
+    color: #e95a0c;
+}
+
+.cta-button:hover{
+    background-color:#c74906 ;
+}
+
+header {
+    background: #333;
+    color: #fff;
+}
+
+.navbar {
+    position: fixed; /* Fija el header */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 2fr 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 15% 5% 15%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%);
+    /* max-width: 1200px; */
+    margin: auto;
+    /* position: relative;  */
+    /* Agregado para el posicionamiento absoluto del menú en móviles */
+    /* background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%); */
+}
+
+.navbar.active {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0.95) 100%); /* Fondo blanco puro cuando el menú está activo */
+}
+
+.logo_main {
+    height: 196px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: right;
+    gap: 5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    /* Alineación a la derecha */
+    position: absolute;
+    right: 1rem; /* Ajusta según el espacio necesario */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 1.5rem;
+    height: 0.15rem;
+    background: #333;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Estilo del menú hamburguesa */
+.menu-toggle::before,
+.menu-toggle::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 0.15rem;
+    background: #333;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle::before {
+    top: -0.5rem;
+}
+
+.menu-toggle::after {
+    bottom: -0.5rem;
+}
+
+.hr-container {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    display: flex;
+    height: 5px;
+    width: 70%;
+    background: linear-gradient(90deg, rgba(255, 0, 89, 1) 0%, rgba(247, 0, 248, 1) 100%);
+    border: none;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: auto;
+    background-image: url(./public/banner_fullsize.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    /* padding: 2rem; */
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.5rem 5rem;
+    background: #e95a0c;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 29px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    width: 100%;
+    /* gap: 5rem; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    /* background: #f4f4f4; */
+}
+
+.features_content{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.from_chile{
+    height: 365px;
+    width: auto;
+}
+
+.features_content p{
+    line-height: 200%;
+    min-width: 350px;
+}
+
+.features_hoja_izquierda{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.features_hoja_izquierda img{
+    height:527px;
+    width: auto;
+}
+
+.features_hoja_derecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items:start;
+}
+
+.features_hoja_derecha img{
+    height:183px;
+    width: auto;
+}
+
+.drinks{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 4rem 0;
+}
+
+.drinks h2{
+    margin-left: 26%;
+}
+
+
+.drink_content{
+    display: grid;
+    grid-template-columns: 300px 1fr 50px 1fr 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drinks_hoja_izquierda{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.drinks_hoja_izquierda img{
+    height:610px;
+    width: auto;
+}
+
+.drinks_hoja_derecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items:start;
+}
+
+.drinks_hoja_derecha img{
+    height:492px;
+    width: auto;
+}
+
+.drink_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 5%;
+    gap: 20px;
+}
+
+.lata{
+    width: 231px;
+    height: auto;
+}
+
+.separador{
+    display: block;
+    align-items: self-start;
+    height: 85%;
+}
+
+.separador img{
+    width: 22px;
+    height: auto;
+}
+
+
+.about {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.about_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about_hoja_izquierda{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about_hoja_izquierda img{
+    height:670.5px;
+    width: auto;
+}
+
+.about_hoja_derecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items:start;
+}
+
+.about_hoja_derecha img{
+    height:360px;
+    width: auto;
+}
+
+
+/* Sección Texto e Imagen */
+.text-image {
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+.text-image-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text h2 {
+    margin-bottom: 1rem;
+}
+
+.text p {
+    margin-bottom: 1rem;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    /* margin: 0 150px; */
+    padding: 4rem 15%;
+    width: 100%;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+/* .contact input, .contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+} */
+
+.submit_container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.contact button {
+    border: none;
+}
+
+.label_container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0;
+    align-items: flex-end;
+}
+
+.label_container label{
+    border-bottom: 2px solid #ff0059 !important;
+    width: auto;
+    width: 150px;
+    font-size: 29px;
+    letter-spacing: 5px;
+    color: #e95a0c;
+    text-wrap: nowrap;
+}
+
+.label_container input{
+    border-bottom: 2px solid #ff0059 !important;
+    border-radius: 0;
+    border: #ffffff;
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+input.error {
+    border-color: red;
+}
+
+.error {
+    color: red;
+    font-size: 0.875em;
+    height: auto;
+    padding-bottom: 1em;
+}
+
+
+
+
+
+
+.label_container input::placeholder{
+    color: #a8a8a8;
+}
+
+.label_container input:active{
+    background-color: #ffffff;
+}
+
+.footer {
+    background: #e95a0c;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    padding: 48px 0;
+}
+
+.relleno{
+    display:block;
+}
+
+.content_footer{
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    gap: 5%;
+}
+
+.content_footer img{
+    height: 320px;
+    width: auto;
+}
+
+.content_footer ul{
+    text-align: left;
+}
+
+.content_footer li:nth-child(even){
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.content_footer li:nth-child(odd){
+    font-size: 29px;
+    margin-bottom: 0;
+    text-decoration: none;
+    list-style: none;
+    letter-spacing: 5px;
+}
+
+.content_footer li:last-child{
+    margin-bottom: 0;
+}
+
+.footer_hoja_derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer_hoja_derecha img{
+    height:300px;
+    width: auto;
+}
+
+/* Estilos responsive */
+
+
+@media (max-width: 1300px){
+    .navbar {
+        padding: 2% 5% 5% 5%;
+    }
+
+    .nav-links {
+        gap: 2rem;
+    }
+
+    .logo_main{
+        height: 150px;
+    }
+
+    .features {
+        grid-template-columns: 150px 1fr 150px;
+    }
+
+    .features_hoja_izquierda img{
+        height:350px;
+        width: auto;
+    }
+    
+    .features_hoja_derecha img{
+        height:183px;
+        width: auto;
+    }
+    .drink_content{
+        grid-template-columns: 150px 1fr 50px 1fr 150px;
+    }
+    
+    .drinks_hoja_izquierda img{
+        height:550px;
+        width: auto;
+    }
+    
+    .drinks_hoja_derecha img{
+        height:350px;
+        width: auto;
+    }
+
+    .footer {
+        grid-template-columns: 150px 1fr 150px;
+    }
+    .footer_hoja_derecha img{
+        height:200px;
+        width: auto;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .navbar {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        /* background: #e95a0c; */
+        background-color: rgba(255,255,255,0.95);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        height: 100vh;
+    }
+
+    .nav-links a{
+        color: #e95a0c;
+        font-weight: 400;
+        font-size: 25px;
+    }
+    
+    .nav-links li{
+        text-align: center;
+        gap: 20px;
+        padding: 10% 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .text-image-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .image {
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    .features_content{
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .drinks{
+        padding: 8rem 0;
+    }
+
+    .drinks h2{
+        margin: 0;
+        text-align: center;
+    }
+
+    .drink_content{
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+
+    .drinks_hoja_izquierda{
+        display: none;
+    }
+
+    .drinks_hoja_derecha {
+        display: none;
+    }
+
+    .separador{
+        display: none;
+    }
+
+    .drink_card p{
+        max-width: 300px;
+        text-align: center;
+    }
+    .about {
+        grid-template-columns: 150px 1fr 150px;
+    }
+
+    .about_hoja_izquierda img{
+        height:400px;
+        width: auto;
+    }
+    
+    .about_hoja_derecha img{
+        height:150px;
+        width: auto;
+    }
+
+    .content_footer{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: baseline;
+    }
+
+    .content_footer ul{
+        padding-left: 35px;
+    }
+
+    .footer_hoja_derecha{
+        align-items: center;
+    }
+    
+}
+
+@media (max-width: 768px){
+
+    .logo_main{
+        height: 120px;
+    }
+
+    .from_chile{
+        height: 300px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 4rem 15%;
+    }
+
+    .features_hoja_izquierda{
+        display: none;
+    }
+    
+    .features_hoja_derecha {
+        display: none;
+    }
+
+    .drinks{
+        padding: 5rem 15% 15rem 15%;
+    }
+
+    .drink_content{
+        gap: 10%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 4rem 15%;
+    }
+    
+    .about_hoja_izquierda{
+        display: none;
+    }
+    
+    .about_hoja_derecha {
+        display: none;
+    }
+
+    .submit_container {
+        justify-content: center;
+    }
+
+    .relleno{
+        display: none;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        padding: 4rem 15%;
+    }
+
+    .footer_hoja_derecha {
+        display: none;
+    }
+
+    .submit_container > button{
+        width: 100%;
+        margin-top: 16px ;
+    }
+}
+
+
+@media (max-width: 768px){
+
+    .label_container label{
+        font-size: 20px;
+    }
+    
+    .label_container input{
+        font-size: 16px;
+    }
+}
